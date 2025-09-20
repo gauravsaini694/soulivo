@@ -225,7 +225,7 @@ body {
   min-height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -272,6 +272,7 @@ html.w-mod-touch * {
   padding: 9px 15px;
   text-decoration: none;
   display: inline-block;
+  margin-top: 20px;
 }
 
 input.w-button {
@@ -389,8 +390,9 @@ h1 {
 
 h2 {
   margin-top: 20px;
-  font-size: 32px;
+  font-size: 38px;
   line-height: 36px;
+  color: #8b77ff;
 }
 
 h3 {
@@ -688,7 +690,7 @@ textarea.w-input, textarea.w-select {
 
 .w-container {
   max-width: 940px;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
 }
 
@@ -2049,7 +2051,7 @@ textarea.w-input, textarea.w-select {
 
 .w-layout-blockcontainer {
   max-width: 940px;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
   display: block;
 }
@@ -2244,18 +2246,18 @@ textarea.w-input, textarea.w-select {
 }
 
 .heading {
-    font-size: 32pt;
+    font-size: 48px;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   color: #fff;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  max-width: 258px;
-  min-height: 225px;
+  /* max-width: 258px;
+  min-height: 225px; */
   font-family: Marcellus, sans-serif;
   font-weight: 400;
-  line-height: 70px;
+  line-height: 50px;
   display: flex;
 }
 
@@ -2302,9 +2304,10 @@ textarea.w-input, textarea.w-select {
 
 .paragraph {
   color: #fff;
-  max-width: 230px;
-  font-family: Marcellus, sans-serif;
-  font-size: 14px;
+    max-width: 500px;
+    font-family: Marcellus, sans-serif;
+    font-size: 17px;
+    margin-top: 20px;
 }
 
 .flex-block {
@@ -2440,6 +2443,7 @@ textarea.w-input, textarea.w-select {
   text-align: center;
   font-family: Work Sans, sans-serif;
   font-weight: 300;
+  font-size: 18px;
 }
 
 .flex-block-4 {
