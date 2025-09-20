@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soulivo Quiz</title>
+  <link rel="stylesheet" href="chat.css" />
+
+  <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '7.28040386859481e+14');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=7.28040386859481e+14&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body>
+  <section class="quiz-section">
+    <div class="quiz-container">
+      <div class="left-content">
+        <div class="quiz-teaser" style="display:none;">
+          <div class="text-block-7">Quiz Teaser</div>
+          <div class="text-block-8">Not sure where to begin? Start with how you feel.</div>
+          <div class="text-block-9">Our 60-second quiz helps you uncover what's going on underneath — and guides you to a reset path designed for exactly that.</div>
+        </div>
+        <div class="left-image">
+          <img src="/girl.jpg" alt="Girl Image" />
+        </div>
+
+        <div class="quiz-btn-container">
+          <button id="take-quiz-btn">Take the Quiz</button>
+        </div>
+
+        <div id="progress-container" class="progress-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="question-wrapper">
+          <form id="form">
+
+            <!-- Question 1 -->
+            <div id="question-1" class="question">
+              <h3>How are you feeling these days?</h3>
+              <label class="option3" data-q1="0">
+                <input type="radio" name="q1" value="0" style="display:none;">
+                I feel weighed down by emotions I can't shake.
+              </label>
+              <label class="option3" data-q1="1">
+                <input type="radio" name="q1" value="1" style="display:none;">
+                I keep second-guessing myself or holding back.
+              </label>
+              <label class="option3" data-q1="2">
+                <input type="radio" name="q1" value="2" style="display:none;">
+                I fall into the same patterns again and again.
+              </label>
+              <label class="option3" data-q1="3">
+                <input type="radio" name="q1" value="3" style="display:none;">
+                My body feels tense, restless, or easily stressed.
+              </label>
+              <label class="option3" data-q1="4">
+                <input type="radio" name="q1" value="4" style="display:none;">
+                I feel lost and unsure of my direction.
+              </label>
+              <label class="option3" data-q1="5">
+                <input type="radio" name="q1" value="5" style="display:none;">
+                I just want to feel calmer and more steady day to day.
+              </label>
+            </div>
+
+            <!-- Question 2 -->
+            <div id="question-2" class="question">
+              <h3>What feels most important for you right now?</h3>
+              <label class="option11" data-q2="0">
+                <input type="radio" name="q2" value="0" style="display:none;">
+                To feel lighter and at ease.
+              </label>
+              <label class="option11" data-q2="1">
+                <input type="radio" name="q2" value="1" style="display:none;">
+                To believe in myself and trust my choices.
+              </label>
+              <label class="option11" data-q2="2">
+                <input type="radio" name="q2" value="2" style="display:none;">
+                To finally break cycles that keep repeating.
+              </label>
+              <label class="option11" data-q2="3">
+                <input type="radio" name="q2" value="3" style="display:none;">
+                To release stress and feel grounded in my body.
+              </label>
+              <label class="option11" data-q2="4">
+                <input type="radio" name="q2" value="4" style="display:none;">
+                To understand myself and my purpose more deeply.
+              </label>
+              <label class="option11" data-q2="5">
+                <input type="radio" name="q2" value="5" style="display:none;">
+                To bring calm and focus into my everyday life.
+              </label>
+            </div>
+
+            <!-- Question 3 -->
+            <div id="question-3" class="question">
+              <h3>What feels like the right first step for you?</h3>
+              <label class="option33" data-q3="0">
+                <input type="radio" name="q3" value="0" style="display:none;">
+                I'm just exploring for now.
+              </label>
+              <label class="option33" data-q3="1">
+                <input type="radio" name="q3" value="1" style="display:none;">
+                I'd like a short step I can complete and see if this really helps me.
+              </label>
+              <label class="option33" data-q3="2">
+                <input type="radio" name="q3" value="2" style="display:none;">
+                I'm ready for a structured, personal journey that adapts to my story.
+              </label>
+            </div>
+
+            <button type="submit" id="submit-quiz-btn">Submit Quiz</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const takeQuizBtn = document.getElementById("take-quiz-btn");
+    const rightColumn = document.querySelector(".right-column");
+    const progressContainer = document.getElementById("progress-container");
+    const progressBar = document.getElementById("progress-bar");
+    const submitBtn = document.getElementById("submit-quiz-btn");
+    const resultBox = document.getElementById("result-box");
+    const teaser = document.querySelector(".quiz-teaser");
+
+    // Scoring system based on user's table
+    const scoringTable = {
+        // Q1 scores
+        "q1_heavy": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 1, "Breath_Body_Reset": 0},
+        "q1_doubt": {"Clarity": 1, "Confidence": 1, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 0},
+        "q1_cycles": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 1, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 0},
+        "q1_body_stress": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 1},
+        "q1_lost": {"Clarity": 1, "Confidence": 0, "Life_Coaching": 1, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 1, "Energy_Healing": 0, "Breath_Body_Reset": 0},
+        "q1_daily_calm": {"Clarity": 1, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 1},
+
+        // Q2 scores
+        "q2_ease": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 1, "Breath_Body_Reset": 1},
+        "q2_confidence": {"Clarity": 0, "Confidence": 1, "Life_Coaching": 1, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 0},
+        "q2_break": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 1, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 0},
+        "q2_grounded": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 1},
+        "q2_purpose": {"Clarity": 0, "Confidence": 0, "Life_Coaching": 1, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 1, "Energy_Healing": 0, "Breath_Body_Reset": 0},
+        "q2_calm": {"Clarity": 1, "Confidence": 0, "Life_Coaching": 0, "Emotional_Pattern_Healing": 0, "Cosmic_Spiritual_Wisdom": 0, "Energy_Healing": 0, "Breath_Body_Reset": 1}
+    };
+
+    // Option mappings
+    const q1OptionMap = ["q1_heavy", "q1_doubt", "q1_cycles", "q1_body_stress", "q1_lost", "q1_daily_calm"];
+    const q2OptionMap = ["q2_ease", "q2_confidence", "q2_break", "q2_grounded", "q2_purpose", "q2_calm"];
+
+    takeQuizBtn.addEventListener("click", function () {
+        const isVisible = !rightColumn.classList.contains("hidden");
+        if (isVisible) {
+            rightColumn.classList.add("hidden");
+            progressContainer.classList.add("hidden");
+            takeQuizBtn.innerText = "Take the Quiz";
+            if(resultBox) resultBox.style.display = "none";
+            teaser.classList.remove("hidden");
+            progressBar.style.width = "0%";
+            document.getElementById("form").reset();
+            // Reset all option states
+            document.querySelectorAll('.option3, .option11, .option33').forEach(option => {
+                option.classList.remove('active');
+            });
+        } else {
+            rightColumn.classList.remove("hidden");
+            progressContainer.classList.remove("hidden");
+            takeQuizBtn.innerText = "Abandon Quiz";
+            teaser.classList.add("hidden");
+        }
+    });
+
+    // Handle option selections for all questions
+    document.querySelectorAll('.option3, .option11, .option33').forEach(option => {
+        option.addEventListener('click', function() {
+            // Get the question type from class
+            const isQ1 = this.classList.contains('option3');
+            const isQ2 = this.classList.contains('option11');
+            const isQ3 = this.classList.contains('option33');
+
+            // Remove active class from siblings
+            if (isQ1) {
+                document.querySelectorAll('.option3').forEach(opt => opt.classList.remove('active'));
+            } else if (isQ2) {
+                document.querySelectorAll('.option11').forEach(opt => opt.classList.remove('active'));
+            } else if (isQ3) {
+                document.querySelectorAll('.option33').forEach(opt => opt.classList.remove('active'));
+            }
+
+            // Add active class and check radio button
+            this.classList.add('active');
+            const radioInput = this.querySelector('input[type="radio"]');
+            if (radioInput) {
+                radioInput.checked = true;
+            }
+
+            updateProgress();
+        });
+    });
+
+    function updateProgress() {
+        const totalQuestions = 3;
+        let answeredQuestions = 0;
+
+        if (document.querySelector('input[name="q1"]:checked')) answeredQuestions++;
+        if (document.querySelector('input[name="q2"]:checked')) answeredQuestions++;
+        if (document.querySelector('input[name="q3"]:checked')) answeredQuestions++;
+
+        const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+        progressBar.style.width = progressPercentage + "%";
+    }
+
+    function calculateScores(q1Answer, q2Answer) {
+        const scores = {
+            "Clarity": 0,
+            "Confidence": 0,
+            "Life_Coaching": 0,
+            "Emotional_Pattern_Healing": 0,
+            "Cosmic_Spiritual_Wisdom": 0,
+            "Energy_Healing": 0,
+            "Breath_Body_Reset": 0
+        };
+
+        // Add Q1 scores
+        const q1Key = q1OptionMap[q1Answer];
+        const q1Scores = scoringTable[q1Key];
+        for (let category in q1Scores) {
+            scores[category] += q1Scores[category];
+        }
+
+        // Add Q2 scores
+        const q2Key = q2OptionMap[q2Answer];
+        const q2Scores = scoringTable[q2Key];
+        for (let category in q2Scores) {
+            scores[category] += q2Scores[category];
+        }
+
+        return scores;
+    }
+
+    function getTopTwoCategories(scores) {
+        const sortedCategories = Object.entries(scores)
+            .sort(([,a], [,b]) => b - a)
+            .slice(0, 2);
+        return sortedCategories.map(([category, score]) => category);
+    }
+
+    // Handle form submission
+    document.getElementById("form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const q1Answer = document.querySelector('input[name="q1"]:checked')?.value;
+        const q2Answer = document.querySelector('input[name="q2"]:checked')?.value;
+        const q3Answer = document.querySelector('input[name="q3"]:checked')?.value;
+
+        if (!q1Answer || !q2Answer || !q3Answer) {
+            alert("Please answer all questions before submitting.");
+            return;
+        }
+
+        const modalContent = document.querySelector('.modal-content');
+        let html = '';
+
+        if (q3Answer === "0") {
+            // First answer of Q3: show free ritual link + community link
+            html = `
+                <h3>Perfect! Let's start exploring together.</h3>
+                <p>Since you're just exploring for now, here are two gentle ways to begin your journey:</p>
+                <div style="margin: 20px 0;">
+                    <a href="#" target="_blank" class="start-reset-btn" style="margin-bottom: 10px; display: block;">Try Our Free Ritual</a>
+                    <a href="#" target="_blank" class="start-reset-btn">Join Our Community</a>
+                </div>
+                <button class="modal-close" onclick="closeModal()">Close</button>
+            `;
+        } else if (q3Answer === "1" || q3Answer === "2") {
+            // Second or third answer: show top 2 categories based on Q1+Q2 scores
+            const scores = calculateScores(parseInt(q1Answer), parseInt(q2Answer));
+            const topCategories = getTopTwoCategories(scores);
+
+            const categoryNames = {
+                "Clarity": "Clarity Coaching",
+                "Confidence": "Confidence Building",
+                "Life_Coaching": "Life Coaching",
+                "Emotional_Pattern_Healing": "Emotional Pattern Healing",
+                "Cosmic_Spiritual_Wisdom": "Cosmic & Spiritual Wisdom",
+                "Energy_Healing": "Energy Healing",
+                "Breath_Body_Reset": "Breath & Body Reset"
+            };
+
+            const tier = q3Answer === "1" ? "Tier 2 (1 Session)" : "Tier 3 (Coaching Package)";
+
+            html = `
+                <h3>Based on your responses, here are your top recommendations:</h3>
+                <p>We've identified these areas as most aligned with your current needs (${tier}):</p>
+                <div style="margin: 20px 0;">
+                    <a href="#" target="_blank" class="start-reset-btn" style="margin-bottom: 10px; display: block;">
+                        ${categoryNames[topCategories[0]]}
+                    </a>
+                    <a href="#" target="_blank" class="start-reset-btn">
+                        ${categoryNames[topCategories[1]]}
+                    </a>
+                </div>
+                <p><em>Note: Links will be updated once available.</em></p>
+                <button class="modal-close" onclick="closeModal()">Close</button>
+            `;
+        }
+
+        modalContent.innerHTML = html;
+        document.getElementById('resultModal').style.display = 'flex';
+    });
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('resultModal').style.display = 'none';
+    }
+
+    // Make closeModal globally available
+    window.closeModal = closeModal;
+});
+</script>
+
+<div class="modal-overlay" id="resultModal">
+  <div class="modal-content">
+    <!-- Content will be dynamically inserted here -->
+  </div>
+</div>
+
+</body>
+</html>
