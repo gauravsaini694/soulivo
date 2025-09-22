@@ -269,10 +269,12 @@ html.w-mod-touch * {
   background-color: #3898ec;
   border: 0;
   border-radius: 0;
-  padding: 9px 15px;
+  padding: 9px 35px;
   text-decoration: none;
   display: inline-block;
   margin-top: 20px;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 input.w-button {
@@ -2730,7 +2732,7 @@ textarea.w-input, textarea.w-select {
 
 .cic {
   /*background-image: radial-gradient(circle, #000, #755dff), url("https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg");*/
-  background-image: radial-gradient(circle, #60359f, #16124a);
+      background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   background-position: 0 0, 0 0;
   background-size: auto, auto;
   border-top-left-radius: 20px;

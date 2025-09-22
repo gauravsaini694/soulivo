@@ -346,7 +346,7 @@ input[type="radio"]:checked::before {
     font-size: 30px;
     line-height: 36px;
     color: #8b77ff;
-}
+  }
 
   .codesktop {
     display: none;
@@ -381,15 +381,17 @@ input[type="radio"]:checked::before {
 
 
 /***********Clarity Reset*********************/
-.Coursesh2{
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .Coursesp{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
+.Coursesh2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Coursesp {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
 .coursesectioncc {
   /*display: flex;
       justify-content: center;
@@ -439,7 +441,7 @@ input[type="radio"]:checked::before {
   background: #fff;
   border: 1px solid #c2b0f999;
   border-bottom: 4px solid #3e2b77;
-  padding: 10%;
+  padding: 7%;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -447,12 +449,12 @@ input[type="radio"]:checked::before {
 
 .text-block-18cc {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
   color: #000;
 }
 
 .text-block-21cc {
-  font-size: 14px;
+  font-size: 18px;
   margin: 10px 0;
   color: #000;
 }
@@ -463,8 +465,9 @@ input[type="radio"]:checked::before {
   border-radius: 20px;
   border: 1px solid #c3afff;
   /*background: #725bf8;*/
-  background: #3e2b77;
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   color: #fff;
+  margin-top: 24px;
 }
 
 /******if clarityresetcc inactive*****/
@@ -472,7 +475,7 @@ input[type="radio"]:checked::before {
   background: transparent;
   border: 1px solid #989898;
   border-bottom: 4px solid #989898;
-  padding: 10%;
+  padding: 7%;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -481,11 +484,11 @@ input[type="radio"]:checked::before {
 .text-block-18cc2 {
   color: #989898;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .text-block-21cc2 {
-  font-size: 14px;
+  font-size: 18px;
   margin: 10px 0;
   color: #989898;
 }
@@ -497,6 +500,7 @@ input[type="radio"]:checked::before {
   border: 1px solid #888;
   background: #989898;
   color: #fff;
+  margin-top: 24px;
 }
 
 
@@ -508,7 +512,7 @@ input[type="radio"]:checked::before {
   background: transparent;
   border: 1px solid #989898;
   border-bottom: 4px solid #989898;
-  padding: 10%;
+  padding: 7%;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -517,11 +521,11 @@ input[type="radio"]:checked::before {
 .text-block-181cc {
   color: #989898;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 .text-block-22cc {
-  font-size: 14px;
+  font-size: 18px;
   margin: 10px 0;
   color: #989898;
 }
@@ -533,6 +537,7 @@ input[type="radio"]:checked::before {
   border: 1px solid #888;
   background: #989898;
   color: #fff;
+  margin-top: 24px;
 }
 
 /************if confidenceresetcc active*****************/
@@ -540,7 +545,7 @@ input[type="radio"]:checked::before {
   background: #fff;
   border: 1px solid #c2b0f999;
   border-bottom: 4px solid #3e2b77;
-  padding: 10%;
+  padding: 7%;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 10px;
@@ -548,12 +553,12 @@ input[type="radio"]:checked::before {
 
 .text-block-181cc-2 {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 22px;
   color: #000;
 }
 
 .text-block-22cc-2 {
-  font-size: 14px;
+  font-size: 18px;
   margin: 10px 0;
   color: #000;
 }
@@ -564,8 +569,9 @@ input[type="radio"]:checked::before {
   border-radius: 20px;
   border: 1px solid #c3afff;
   /*background: #725bf8;*/
-  background: #3e2b77;
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   color: #fff;
+  margin-top: 24px;
 }
 
 .clarityresetboxresetboxcc,
@@ -584,15 +590,16 @@ input[type="radio"]:checked::before {
 
 .div-block-25cc {
   margin-bottom: 26px;
-    background: #f8f4ff;
-    padding: 1%;
-    border: 1px solid #ede3ff;
-    border-radius: 20px;
+  background: #f8f4ff;
+  padding: 1%;
+  border: 1px solid #ede3ff;
+  border-radius: 20px;
 }
 
 .div-block-24cc {
   display: flex;
   margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .cic {
@@ -673,7 +680,7 @@ input[type="radio"]:checked::before {
     margin-bottom: 20px;
     font-size: 16px;
     letter-spacing: 0.3px;
-}
+  }
 
   .resetcontainercc {
     flex-direction: column;
@@ -743,7 +750,7 @@ input[type="radio"]:checked::before {
     padding-right: 10px;
   }
 
-  
+
 
   .clarityresetcc,
   .confidenceresetcc {
@@ -903,12 +910,12 @@ input[type="radio"]:checked::before {
   border-radius: 0.75rem;
   padding: 1rem;
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
   box-sizing: border-box;
   text-align: left;
   flex: 1 1 calc(25% - 1rem);
   border: 1px solid #d7c8f7;
-  height: 248px;
+  /* height: 248px; */
   overflow: auto;
 }
 
@@ -1504,6 +1511,10 @@ input[type="radio"]:checked::before {
   position: relative;
 }
 
+.carouseltop {
+  margin-top: 30px;
+}
+
 .carousel-inner1 {
   display: flex;
   transition: transform 0.3s ease;
@@ -1511,10 +1522,16 @@ input[type="radio"]:checked::before {
 
 .carousel-card1 {
   min-width: 300px;
-  background-color: #241a3d;
+  background-color: #3a2b723d;
   border-radius: 12px;
   padding: 1.5rem;
   margin-right: 1rem;
+
+
+
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.18);
+  border: 5px solid #34315b;
 }
 
 
@@ -1557,7 +1574,11 @@ input[type="radio"]:checked::before {
 
   .carousel-wrapper1 {
     display: flex;
-    background: #050215;
+    background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
+  }
+
+  .phonecard {
+    display: none;
   }
 
   .carousel-card1 img {
@@ -1594,8 +1615,8 @@ input[type="radio"]:checked::before {
 
   .btn1 {
     display: inline-block;
-    background-color: #b497f5;
-    color: #000;
+    background-color: #fff;
+    color: #b497f5;
     padding: 0.7rem 1.2rem;
     text-decoration: none;
     border-radius: 24px;
@@ -1641,7 +1662,7 @@ input[type="radio"]:checked::before {
     width: 100%;
     height: 76vh;
     display: flex;
-    background: linear-gradient(to bottom, #040813, #040813, #040813, #040813, #29124e);
+    background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   }
 
   .footer-left {
@@ -1677,7 +1698,7 @@ input[type="radio"]:checked::before {
   }
 
   .section-3 {
-    background-image: linear-gradient(to bottom, #050215, #050215, #050215, #050215, #050215);
+    /* background-image: linear-gradient(to bottom, #050215, #050215, #050215, #050215, #050215); */
   }
 
   .section-header22 h2 {
