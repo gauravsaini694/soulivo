@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 4rem 2rem;
+      margin: auto;
+      background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
+      color: white;
+      overflow-x: hidden;
+      height: 100vh;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .quiz-heading {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #a7a2ff;
+      font-size: 38px;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 96%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: 1px solid #c3afff;
+      /* background: #725bf8; */
+      background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
+      color: #fff;
+      margin-top: 15px;
+    }
+
+    .homebutton {
+      display: inline-block;
+      color: #755dff;
+      background-color: #fff;
+      padding: 9px 50px;
+      text-decoration: none;
+      border-radius: 24px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .phone-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .phone-group select {
+      flex: 1;
+    }
+
+    .phone-group input {
+      flex: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contact-container">
+    <h2 class="quiz-heading">Contact Us</h2>
+    <form id="BookAppointment">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <div class="phone-group">
+          <select id="countryCode" required>
+            <option value="">Select Code</option>
+            <option value="+1">🇺🇸 +1 United States</option>
+            <option value="+44">🇬🇧 +44 United Kingdom</option>
+            <option value="+61">🇦🇺 +61 Australia</option>
+            <option value="+81">🇯🇵 +81 Japan</option>
+            <option value="+82">🇰🇷 +82 South Korea</option>
+            <option value="+86">🇨🇳 +86 China</option>
+            <option value="+91">🇮🇳 +91 India</option>
+            <option value="+92">🇵🇰 +92 Pakistan</option>
+            <option value="+971">🇦🇪 +971 UAE</option>
+            <option value="+972">🇮🇱 +972 Israel</option>
+            <option value="+973">🇧🇭 +973 Bahrain</option>
+            <option value="+974">🇶🇦 +974 Qatar</option>
+            <option value="+975">🇧🇹 +975 Bhutan</option>
+            <option value="+977">🇳🇵 +977 Nepal</option>
+            <option value="+880">🇧🇩 +880 Bangladesh</option>
+            <option value="+94">🇱🇰 +94 Sri Lanka</option>
+            <option value="+60">🇲🇾 +60 Malaysia</option>
+            <option value="+62">🇮🇩 +62 Indonesia</option>
+            <option value="+63">🇵🇭 +63 Philippines</option>
+            <option value="+64">🇳🇿 +64 New Zealand</option>
+            <option value="+7">🇷🇺 +7 Russia</option>
+            <option value="+55">🇧🇷 +55 Brazil</option>
+            <option value="+34">🇪🇸 +34 Spain</option>
+            <option value="+39">🇮🇹 +39 Italy</option>
+            <option value="+33">🇫🇷 +33 France</option>
+            <option value="+49">🇩🇪 +49 Germany</option>
+            <option value="+52">🇲🇽 +52 Mexico</option>
+            <option value="+234">🇳🇬 +234 Nigeria</option>
+            <option value="+27">🇿🇦 +27 South Africa</option>
+          </select>
+          <input type="text" id="phoneNumber" placeholder="Enter phone number" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div  style="margin-top: 20px; text-align: center;">
+    <a href="index.html" class="homebutton">Back To Home</a>
+  </div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Toastr for notifications -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script>
+    $(function () {
+      $("#BookAppointment").on("submit", function (event) {
+        event.preventDefault();
+
+        var name = $("#name").val().trim();
+        var email = $("#email").val().trim();
+        var countryCode = $("#countryCode").val().trim();
+        var phoneNumber = $("#phoneNumber").val().trim();
+        var message = $("#message").val().trim();
+
+        // Country Code validation
+        if (!countryCode) {
+          toastr.error("Please select a country code.");
+          return;
+        }
+
+        var fullPhone = countryCode + phoneNumber;
+
+        var data = {
+          companyId: "68d23a64ab52894e348b322b",
+          formId: "68d23a65ab52894e348b3238",
+          locationId: "68d23a64ab52894e348b322d",
+          source: "Soulivo",
+          fields: [
+            { key: "name", value: name },
+            { key: "email", value: email },
+            { key: "phoneNumber", value: fullPhone },
+            { key: "message", value: message }
+          ]
+        };
+
+        var BookAppointment = JSON.stringify(data);
+        $.ajax({
+          url: "https://crm-api.leadhooper.com/api/lead",
+          headers: { 'Content-Type': 'application/json' },
+          type: "post",
+          data: BookAppointment,
+          success: function (d) {
+            $("#BookAppointment")[0].reset();
+            toastr.success(d.message);
+            window.location = "index.html";
+          },
+          error: function (xhr, status, error) {
+            var errorMessage = xhr.responseJSON ? xhr.responseJSON.message : 'Failed to submit form';
+            toastr.error(errorMessage);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

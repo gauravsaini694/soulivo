@@ -27,6 +27,8 @@
 }
 
 
+
+
 /***********thin-scrollbar end*******************/
 
 .setbtncolor {
@@ -334,18 +336,35 @@ input[type="radio"]:checked::before {
   }
 
   .quiz-heading {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
-    margin: 1.5rem 0;
+    margin: 6px 0;
     color: #8b77ff;
     line-height: 2rem;
   }
 
   h2 {
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 36px;
     color: #8b77ff;
+  }
+
+  h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .div-block-24cc {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 14px !important;
+  }
+
+  .Coursesh2 {
+    text-align: center;
+    margin-bottom: 0px !important;
   }
 
   .codesktop {
@@ -812,13 +831,10 @@ input[type="radio"]:checked::before {
 
 /***********Clarity Reset end********************/
 
-
-
-
-
-
-
-
+.herosection h1,
+.herosection p {
+  text-shadow: 0px 2px 6px rgb(0 0 0);
+}
 
 
 .setborder {
@@ -835,6 +851,7 @@ input[type="radio"]:checked::before {
 .text-block-20 {
   color: #fff;
   font-size: 18px;
+  line-height: 22px;
 }
 
 .text-block-19 {
@@ -842,6 +859,7 @@ input[type="radio"]:checked::before {
   font-weight: bold;
   margin: 1rem 0;
   color: #8b77ff;
+  line-height: 40px;
 }
 
 .text-block-15 {
@@ -1688,7 +1706,7 @@ input[type="radio"]:checked::before {
   }
 
   .text-block-8 {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
     margin: 1.5rem 0;
     color: #8b77ff;
@@ -1703,13 +1721,27 @@ input[type="radio"]:checked::before {
 
   .section-header22 h2 {
     line-height: 2rem;
-    font-size: 30px;
+    font-size: 22px;
+  }
+
+  .testimonial-box22 p {
+    color: #4a4a6a;
+    line-height: 1.6;
+    font-size: 12px;
+    margin: 0 0 16px;
+    flex-grow: 1;
   }
 
   .text-block-19 {
-    line-height: 2rem;
-    font-size: 30px;
+    line-height: 24px;
+    font-size: 22px
   }
+
+  .text-block-20 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+}
 
   #closePopup {
     position: absolute;
@@ -1777,8 +1809,44 @@ input[type="radio"]:checked::before {
     font-size: 16px;
   }
 
+  .paragraph {
+    color: #fff;
+    max-width: 500px;
+    font-family: Marcellus, sans-serif;
+    font-size: 17px;
+    margin-top: -20px;
+  }
+
+  .text-block-18cc {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+  }
+
+  .text-block-181cc {
+    color: #989898;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .text-block-18cc2 {
+    color: #989898;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .text-block-181cc-2 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+  }
+
   .w-layout-blockcontainer {
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+
+  .w-layout-blockcontainer-Courses {
+    margin-top: -70px !important;
   }
 
   .nav-menu {
@@ -1820,10 +1888,9 @@ input[type="radio"]:checked::before {
 
   .heading {
     min-height: 98px;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 25px;
-    margin-left: -143px;
-    margin-top: -10px;
+    margin-top: 0px;
     text-align: left;
   }
 
@@ -2174,15 +2241,16 @@ input[type="radio"]:checked::before {
     max-width: 600px;
     margin: 0 auto;
     margin-top: 0px;
-    line-height: 1.5rem;
+    line-height: 18px;
     margin-top: 12px;
+    font-size: 16px;
   }
 
   .text-block-23 {
     line-height: 2rem;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
-    margin: 1.5rem 0;
+    margin: 6px 0;
     color: #8b77ff;
   }
 
@@ -2358,6 +2426,7 @@ input[type="radio"]:checked::before {
     max-width: 100%;
     text-align: center;
     margin: 0px auto;
+    font-size: 16px;
   }
 
   .sub-info11 {
@@ -2371,11 +2440,17 @@ input[type="radio"]:checked::before {
   }
 
   .text-content11 h2 {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
-    margin: 1.5rem 0;
+    margin: 6px 0;
     color: #8b77ff;
     line-height: 2rem;
+  }
+
+  .sub-info11 h3 {
+    margin-top: 14px;
+    color: #8b77ff;
+    font-weight: 600;
   }
 }
 
@@ -2392,7 +2467,7 @@ input[type="radio"]:checked::before {
   }
 
   .text-block-23 {
-    line-height: 2rem;
+   line-height: 24px;
   }
 
   .footerblocknoneD {

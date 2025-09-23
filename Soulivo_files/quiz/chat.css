@@ -20,10 +20,10 @@ body {
   border-radius: 8px;
   font-weight: 500;*/
   padding: 12px 0px;
-  background-color: #5a2a83;
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   color: white;
   font-weight: normal;
-  border: 2px solid #5a2a83;
+  border: 2px solid #1f3364;
   border-radius: 30px;
   cursor: pointer;
   display: block;
@@ -140,17 +140,26 @@ body {
 
 .progress-container {
   width: 80%;
-  background-color: #ddd;
-  height: 10px;
+  background-color: #fff;
+  height: 5px;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 1rem;
 }
 
+.btn-Quiz{
+  padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
 .progress-bar {
   height: 100%;
   width: 0%;
-  background-color: #000;
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   transition: width 0.3s;
 }
 
@@ -262,7 +271,7 @@ body {
 
 .option11.active {
   border: 1px solid #1f3364;
-     background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
 
   color: #fff;
 }
@@ -298,7 +307,7 @@ body {
 
 .option33.active {
   border: 1px solid #1f3364;
-     background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   color: #fff;
 }
 
@@ -376,7 +385,7 @@ body {
 
 #submit-quiz-btn {
   padding: 12px 20px;
-    background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
 
   color: white;
   font-weight: bold;
@@ -427,14 +436,14 @@ body {
 .modal-content h3 {
   margin-bottom: 15px;
   font-size: 22px;
-  color: #4B0082;
+  color: #a7a2ff;
 }
 
 /* Close Button */
 .modal-close {
   margin-top: 20px;
   padding: 10px 20px;
-  background: #4B0082;
+  background: linear-gradient(to bottom, #1f3364, #26326b, #2f3071, #3a2d76, #472879);
   color: white;
   border: none;
   border-radius: 8px;
